@@ -1,0 +1,32 @@
+# Node.js-specific ignores
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Editor and OS-specific ignores
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Environment variables
+.env
+
+# JSON files
+FBcookies.json
+LinkedinCookies.json
+
+# HTML files
+linkedin_jobs.html
+facebook_jobs.html

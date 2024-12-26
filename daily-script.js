@@ -3,13 +3,11 @@
 const runScriptsAndSendEmail = require("./combine-runner")
 const runService = async () => {
     try {
-        console.log('Running scheduled job...');
+        console.log('Job Scrapping Starts .... ');
         await runScriptsAndSendEmail();
-        console.log('Job completed. Scheduling the next run in 24 hours...');
-        setTimeout(runService, 24 * 60 * 60 * 1000); // 24 hours in milliseconds
+        console.log('Job Scrapping Complete.');
     } catch (error) {
-        console.error('Error in scheduled job:', error);
-        setTimeout(runService, 24 * 60 * 60 * 1000); // Ensure the next run is still scheduled
+        console.log('Job Scrapping Failed.');
     }
 };
 

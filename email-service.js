@@ -1,5 +1,5 @@
 const nodemailer = require('nodemailer');
-
+require('dotenv').config();
 // Function to send email with the HTML file
 const sendEmail = async () => {
     try {
@@ -7,13 +7,13 @@ const sendEmail = async () => {
         const transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
-                user: 'restaurantemailmaker@gmail.com', // Replace with your email
-                pass: 'aumjywjqjcnfitnc',   // Use an App Password (not your main password)
+                user: process.env.email, // Replace with your email
+                pass: process.env.pass,   // Use an App Password (not your main password)
             },
         });
         // Define email options
         const mailOptions = {
-            from: 'YourAssistant@gmail.com',
+            from: process.env.email,
             to: 'aviad825@gmail.com', // Replace with your email
             subject: 'LinkedIn and Facebook Job Scraper Results',
             text: 'Find the attached HTML file with the job search results.',

@@ -7,11 +7,11 @@ const {resolve} = require("node:path");
 puppeteer.use(StealthPlugin());
 
 const keywords = ['intern', 'student', 'ללא נסיון', 'סטודנט', 'junior', 'בלי ניסיון', 'בוגר.ת מצטיינ.ת', 'ג\'וניור', 'גוניור', 'משרת סטודנט'];
-const search_keywords = ['intern', 'student',  'סטודנט', 'ג\'וניור', 'גוניור', 'משרת סטודנט'];
+const search_keywords = ['intern', 'student',  'סטודנט', 'גוניור', 'משרת סטודנט'];
 
 async function scrapeFacebookPosts(groupMap) {
     const browser = await puppeteer.launch({
-        headless: false,
+        headless: true,
         defaultViewport: null,
         args: ['--start-maximized'],
     });
@@ -69,7 +69,7 @@ async function scrapeFacebookPosts(groupMap) {
 
                 // Scroll down
                 await page.evaluate(() => window.scrollBy(0, window.innerHeight / 2));
-                await delay(2000 + Math.random() * 500);
+                await delay(1200 + Math.random() * 500);
 
                 // Extract posts after scrolling down
                 const newPosts = await extractPosts(page);

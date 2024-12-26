@@ -6,7 +6,7 @@ const scrapeLinkedinPosts = require("./linkedin-scraper");
 const runScriptsAndSendEmail = async () => {
     try {
         console.log('Starting LinkedIn Scraper...');
-        //await scrapeLinkedinPosts(); // Run LinkedIn scraper
+        await scrapeLinkedinPosts(); // Run LinkedIn scraper
 
 
         // Define the group map

@@ -8,7 +8,7 @@ puppeteer.use(StealthPlugin());
 
 async function scrapeLinkedinPosts () {
     const browser = await puppeteer.launch({
-        headless: true,
+        headless: false,
         defaultViewport: null,
         args: ['--start-maximized'],
     });

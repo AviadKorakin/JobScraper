@@ -11,7 +11,7 @@ const search_keywords = ['intern', 'student',  'סטודנט', 'גוניור', '
 
 async function scrapeFacebookPosts(groupMap) {
     const browser = await puppeteer.launch({
-        headless: true,
+        headless: false,
         defaultViewport: null,
         args: ['--start-maximized'],
     });

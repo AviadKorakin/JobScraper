@@ -21,6 +21,7 @@ const runScriptsAndSendEmail = async () => {
             'https://www.facebook.com/groups/hitech.jobs.il': 10,
             'https://www.facebook.com/groups/start.hightech': 10,
             'https://www.facebook.com/groups/262663949723327': 10
+
         };
         console.log('Starting Facebook Scraper...');
         // Run the scraper
